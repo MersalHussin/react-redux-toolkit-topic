@@ -13,7 +13,6 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({product}) => {
   const {id,title,thumbnail,price} = product
-  // const {cartItems} = useSelector((state: RootState) => state.cart);
   const dispatch = useAppDispatch();
   return (
     <div>

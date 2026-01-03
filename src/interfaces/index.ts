@@ -3,4 +3,5 @@ export interface IProudct {
     title: string;
     thumbnail: string;
     price: number;
+    qty:number;
 }
