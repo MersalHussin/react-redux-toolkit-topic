@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
-import { RootState } from "../app/store";
+import { cartSelector } from "../app/features/cart/cartSlice";
 
 
 const Navbar = () => {
-  const {cartItems} = useSelector((state: RootState) => state.cart);
+  const {cartItems} = useSelector(cartSelector);
 
   return (
     <header className="bg-white rounded-md shadow mb-10">

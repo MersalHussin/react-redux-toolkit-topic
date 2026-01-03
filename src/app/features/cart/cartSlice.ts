@@ -2,6 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 import { IProudct } from "../../../interfaces";
 import { addItemToShopping } from "../../../util";
+import { RootState } from "../../store";
 
 interface CartState {
     cartItems: IProudct[];
@@ -22,5 +23,8 @@ const cartSlice = createSlice({
 });
 
 export const { addtoCartAction } = cartSlice.actions;
+export const  cartSelector = (({cart}: RootState) => cart);
+
+
 
 export default cartSlice.reducer;
